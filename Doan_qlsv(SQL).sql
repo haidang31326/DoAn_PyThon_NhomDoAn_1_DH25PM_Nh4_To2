@@ -4,7 +4,7 @@ USE qlsv
 -- Bảng Khoa
 CREATE TABLE khoa (
     makhoa VARCHAR(10) PRIMARY KEY,
-    tenkhoa VARCHAR(20)
+    tenkhoa VARCHAR(50)
 );
 ALTER TABLE sinhvien MODIFY malop CHAR(10);
 select *from khoa

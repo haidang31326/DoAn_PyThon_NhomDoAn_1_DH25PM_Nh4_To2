@@ -105,7 +105,7 @@ class BaseTab(tk.Frame):
         super().__init__(parent)
         self.title_font = ("Arial", 16, "bold")
     def add_title(self, text): 
-        tk.Label(self, text=text, font=self.title_font, fg="#2c3e50").pack(pady=15)
+        tk.Label(self, text=text, font=self.title_font, fg="white").pack(pady=15)
 
 # ---------------------------------------------------------
 # TAB 1: QUẢN LÝ KHOA
@@ -122,9 +122,9 @@ class TabKhoa(BaseTab):
         self.e_ten = tk.Entry(frm, width=30); self.e_ten.grid(row=0, column=3, padx=5)
         
         btn = tk.Frame(self); btn.pack(pady=5)
-        tk.Button(btn, text="Thêm", command=self.add, bg="#2ecc71").pack(side="left", padx=5)
-        tk.Button(btn, text="Sửa", command=self.update, bg="#3498db").pack(side="left", padx=5)
-        tk.Button(btn, text="Xóa", command=self.delete, bg="#e74c3c").pack(side="left", padx=5)
+        tk.Button(btn, text="Thêm", command=self.add, bg="black").pack(side="left", padx=5)
+        tk.Button(btn, text="Sửa", command=self.update, bg="black").pack(side="left", padx=5)
+        tk.Button(btn, text="Xóa", command=self.delete, bg="black").pack(side="left", padx=5)
         
         self.tree = ttk.Treeview(self, columns=("ma","ten"), show="headings", height=8)
         self.tree.pack(padx=20, fill="x", expand=False)
@@ -186,9 +186,9 @@ class TabLop(BaseTab):
         tk.Label(frm_input, text="Niên khóa:").grid(row=1, column=2); self.e_nk=tk.Entry(frm_input); self.e_nk.grid(row=1, column=3)
         
         btn = tk.Frame(self); btn.pack(pady=10)
-        tk.Button(btn, text="Thêm", command=self.add, bg="#2ecc71").pack(side="left", padx=5)
-        tk.Button(btn, text="Sửa", command=self.update, bg="#3498db").pack(side="left", padx=5)
-        tk.Button(btn, text="Xóa", command=self.delete, bg="#e74c3c").pack(side="left", padx=5)
+        tk.Button(btn, text="Thêm", command=self.add, bg="black").pack(side="left", padx=5)
+        tk.Button(btn, text="Sửa", command=self.update, bg="black").pack(side="left", padx=5)
+        tk.Button(btn, text="Xóa", command=self.delete, bg="black").pack(side="left", padx=5)
         
         self.tree=ttk.Treeview(self, columns=("m","t","k","n"), show="headings", height=8)
         self.tree.pack(padx=20, pady=10, fill="x", expand=False)
@@ -256,9 +256,9 @@ class TabMonHoc(BaseTab):
         tk.Label(frm, text="Tên MH:").pack(side="left"); self.e_ten=tk.Entry(frm); self.e_ten.pack(side="left")
         tk.Label(frm, text="Số TC:").pack(side="left"); self.e_tc=tk.Spinbox(frm, from_=1, to=10, width=5); self.e_tc.pack(side="left")
         
-        tk.Button(frm, text="Thêm", command=self.add, bg="#2ecc71").pack(side="left", padx=5)
-        tk.Button(frm, text="Sửa", command=self.update, bg="#3498db").pack(side="left", padx=5)
-        tk.Button(frm, text="Xóa", command=self.delete, bg="#c0392b").pack(side="left")
+        tk.Button(frm, text="Thêm", command=self.add, bg="black").pack(side="left", padx=5)
+        tk.Button(frm, text="Sửa", command=self.update, bg="black").pack(side="left", padx=5)
+        tk.Button(frm, text="Xóa", command=self.delete, bg="black").pack(side="left")
         
         self.tree=ttk.Treeview(self, columns=("m","t","tc"), show="headings", height=8)
         self.tree.pack(padx=20, pady=10, fill="x", expand=False)
@@ -330,9 +330,9 @@ class TabSinhVien(BaseTab):
 
         # --- 2. KHUNG NÚT CHỨC NĂNG CƠ BẢN ---
         btn = tk.Frame(self); btn.pack(pady=10)
-        tk.Button(btn, text="Thêm", command=self.add, bg="#2ecc71").pack(side="left", padx=5)
-        tk.Button(btn, text="Sửa", command=self.update, bg="#3498db").pack(side="left", padx=5)
-        tk.Button(btn, text="Xóa", command=self.delete, bg="#c0392b").pack(side="left", padx=5)
+        tk.Button(btn, text="Thêm", command=self.add, bg="black").pack(side="left", padx=5)
+        tk.Button(btn, text="Sửa", command=self.update, bg="black").pack(side="left", padx=5)
+        tk.Button(btn, text="Xóa", command=self.delete, bg="black").pack(side="left", padx=5)
         tk.Button(btn, text="Làm mới form", command=self.clear_form).pack(side="left", padx=5)
         
         # --- 3. KHUNG TÌM KIẾM ---
@@ -481,7 +481,7 @@ class TabDiem(BaseTab):
         tk.Label(frm, text="Điểm QT:").grid(row=1, column=0); self.e_qt=tk.Entry(frm, width=10); self.e_qt.grid(row=1, column=1)
         tk.Label(frm, text="Điểm Thi:").grid(row=1, column=2); self.e_thi=tk.Entry(frm, width=10); self.e_thi.grid(row=1, column=3)
         
-        tk.Button(frm, text="Lưu Điểm", command=self.save, bg="#f39c12").grid(row=1, column=4, padx=10)
+        tk.Button(frm, text="Lưu Điểm", command=self.save, bg="black").grid(row=1, column=4, padx=10)
         
         self.tree=ttk.Treeview(self, columns=("s","t","m","n","q","th","tb"), show="headings", height=8)
         self.tree.pack(padx=20, pady=10, fill="x", expand=False)
